@@ -42,23 +42,26 @@ public class Compose {
 				spaceCount = 0;
 			}
 			if (lineCount == 6) {
+				lineCount = 0;
 				if (end) {
 					addition = addition + "|]";
-				} else {
-					addition = addition + "| ";
-				}
-				lineCount = 0;
-			}
-			if (currNote == ' ' || currNote == '|' || currNote == ':') {
-			} else {
-				str = str + currNote + addition;
-				if (end) {
 					str = str.substring(0, str.length()-1) + currNote + addition;
 					System.out.println("this");
 					break full;
+				} else {
+					addition = addition + "| ";
+				}
+				
+			}
+			if (currNote == ' ' || currNote == '|' || currNote == ':') {
+			} else {
+				
+				if (end) {
+					
 				}else if(start){
-					str = str + addition;
 					start = false;
+				}else{
+					str = str + currNote + addition;
 				}
 			}
 			System.out.println(str);
