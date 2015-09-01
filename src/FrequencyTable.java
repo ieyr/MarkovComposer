@@ -38,9 +38,7 @@ public class FrequencyTable {
 		// System.out.println(freqs.toString());
 		// return notes.get( maxIndices[(int)
 		// (Math.random()*maxIndices.length)]);
-		if (notes.size() == 0) {
-			return 'z';
-		}
+
 		return notes.get((int) (Math.random() * notes.size()));
 	}
 }
